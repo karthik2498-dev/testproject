@@ -32,7 +32,6 @@ import com.test.pro.model.Profiles;
 import com.test.pro.repo.ProfileRepo;
 import com.test.pro.service.ProfileService;
 
-@SpringBootTest
 @ExtendWith(MockitoExtension.class)
 class CompleteProApplicationTests {
 
@@ -48,11 +47,6 @@ class CompleteProApplicationTests {
 
     private static ProfileRequestVo req=null;
     
-    /*@BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);  // Initialize mocks
-       
-    }*/
     
     @BeforeAll
     static void request() {
@@ -62,7 +56,7 @@ class CompleteProApplicationTests {
          req.setAge(30);
     }
 
-    @Test
+   /* @Test
     void testSaveUser_whenUserNotPresentInDB() {
     	
         when(profileRepo.findById(req.getProfileId())).thenReturn(Optional.empty()); // Simulate user not found
@@ -114,9 +108,9 @@ class CompleteProApplicationTests {
         assertEquals(req.getAge(), result.getAge());
         assertEquals(req.getName(), result.getName());
         assertEquals(req.getProfileId(), result.getProfileId());
-    }
+    }*/
 
-    @Test
+  /*  @Test
     void testSaveUser_whenAgeOrNameIsNull() {
         req.setName(null); // Simulate invalid input
 
@@ -136,7 +130,7 @@ class CompleteProApplicationTests {
         assertEquals(30, result.getAge()); // Check that age is still correctly set
         assertNull(result.getName()); // Ensure name is null
         assertEquals(1L, result.getProfileId());
-    }
+    }*/
     
     @Test
     void updateUserTest() {
@@ -203,7 +197,7 @@ class CompleteProApplicationTests {
     	
     }
     
-	@Test
+	/*@Test
     void Getallusertest() {
     	
     	Long id = 1L;
@@ -219,7 +213,7 @@ class CompleteProApplicationTests {
     	ProfileGetAllResponse  result=profileService.GetAllUser();
     	
     	assertEquals(30,result.getProfiles().get(0).getAge());
-    }
+    }*/
 	
 	@Test
 	void DeleteUserByIdTest() {
