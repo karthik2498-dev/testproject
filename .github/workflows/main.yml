@@ -24,6 +24,7 @@ jobs:
     - name: Build and Push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./testproject/CompletePro
+        file: ./testproject/CompletePro/Dockerfile
         push: true
         tags: karthik24981998/completepro-app:1.0
