@@ -4,7 +4,13 @@ FROM gradle:8.4-jdk17 AS builder
 WORKDIR /app
 
 # Copy the whole project
-COPY --chown=gradle:gradle . .
+#COPY --chown=gradle:gradle . . --commenting for testing app
+
+# Copy Gradle files to the container
+COPY CompletePro/build.gradle CompletePro/settings.gradle ./
+
+# Copy the source code
+COPY CompletePro/src ./src
 
 # Build the application
 RUN gradle build -x test --no-daemon
