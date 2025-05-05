@@ -1,6 +1,14 @@
 version: '3.8'
 
 services:
+
+  completepro-app:
+    image: karthik24981998/completepro-app:1.1
+    container_name: completepro-app
+    restart: always
+    ports:
+      - "1155:1155"
+
   mysql:
     image: mysql
     container_name: mysql
