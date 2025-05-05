@@ -27,4 +27,4 @@ jobs:
         context: ./
         file: ./CompletePro/Dockerfile
         push: true
-        tags: karthik24981998/completepro-app:1.1
+        tags: karthik24981998/completepro-app:1.3
